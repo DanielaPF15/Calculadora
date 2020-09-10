@@ -1,0 +1,70 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+<div id="mensaje">Hola esto es un div</div>
+<a onclick="cambiarMensaje('mensaje')">Cambiar mensaje</a>
+
+<div id="mensaje2">Hola esto es mensaje 2v</div>
+<a onclick="cambiarMensaje('mensaje2')">Cambiar mensaje 2</a>
+
+
+<script type="text/javascript" src="scripts.js"></script>
+
+</body>
+</html>-->
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div id="divTest"></div>
+    <div class="container">
+        <div class="calculator" class="column">
+            <h1 style="text-align: center;"> Calculadora </h1>
+            <div class="calculator-info">
+                <input type="text" id="data" disabled /><!--no escribe disable-->
+            </div>
+            <div class="calculator-data row">
+                <div class="row" style=" width: 90%; flex-wrap: wrap;">
+                    <input type="button" class="btn-number" onclick="pintarNumero(this.value);" value="1"><!--this pinta el valor del input-->
+                    <input type="button" class="btn-number" onclick="pintarNumero(this.value);" value="2">
+                    <input type="button" class="btn-number" onclick="pintarNumero(this.value);" value="3">
+                    <input type="button" class="btn-number" onclick="pintarNumero(this.value);" value="4">
+                    <input type="button" class="btn-number" onclick="pintarNumero(this.value);" value="5">
+                    <input type="button" class="btn-number" onclick="pintarNumero(this.value);" value="6">
+                    <input type="button" class="btn-number" onclick="pintarNumero(this.value);" value="7">
+                    <input type="button" class="btn-number" onclick="pintarNumero(this.value);" value="8">
+                    <input type="button" class="btn-number" onclick="pintarNumero(this.value);" value="9">
+                    <input type="button" class="btn-number" onclick="Limpiar();" value="Limpar">
+                    <input type="button" class="btn-number" onclick="pintarNumero(this.value);" value="0">
+                    <input type="button"  class="btn-number"onclick="mostrarResultado();" value="=">
+                </div>
+                <div class="column" style="width: 10%; text-align: center; ">
+                    <input type="button" class="btn-operator" value="+" onclick="pintarOperador(this.value);">
+                    <input type="button" class="btn-operator" value="-" onclick="pintarOperador(this.value);">
+                    <input type="button" class="btn-operator" value="*" onclick="pintarOperador(this.value);">
+                    <input type="button" class="btn-operator" value="/" onclick="pintarOperador(this.value);">
+
+                </div>
+            </div>
+            <input class="btn-pregunta" type="button" value="Preguntas" onclick="preguntas();">
+            <div id="respuesta">
+
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./codigo.js"></script>
+</body>
+
+</html>
